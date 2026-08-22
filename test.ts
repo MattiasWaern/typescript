@@ -36,3 +36,24 @@ const user = {
 
 console.log(user.name);
 console.log(user.age);
+
+
+let username: string = "alice";
+
+username = 'alice'
+
+
+const names: string[] = [];
+names.push('Dylan');
+
+
+const numbers = [1, 2, 3, 4];
+numbers.push(4);
+// error numbers.push("2") 
+let head: number = numbers[0];
+
+
+let ourTuple: [number, boolean, string];
+
+ourTuple = [5, true, 'bob'];
+

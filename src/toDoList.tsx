@@ -11,12 +11,19 @@ function ToDoList() {
         setInput("");
     }
 
+    function deleteTask(index: number){
+        setList(list.filter((_, i) => i !== index));
+    }
+
     return (
         <div>
             <form id="toDoList" onSubmit={handleSubmit}>
 
                 {list.map((task, index) => (
-                    <li key={index}>{task}</li>
+                    <li key={index}>
+                        {task}
+                        <button type='button' onClick={() => deleteTask(index)}>Ta bort</button>
+                        </li>
                 ))}
 
                 <input

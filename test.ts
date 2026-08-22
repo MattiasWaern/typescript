@@ -17,3 +17,11 @@ let age: number = 30;
 let sentence : string = `Hello, my namesis ${fullName} and I'll be ${age + 1} next year`;
 
 console.log(sentence);
+
+
+const uniqueKey: symbol = Symbol('description');
+const obj = {
+    [uniqueKey]: 'This is a unique property'
+};
+
+console.log(obj[uniqueKey]);

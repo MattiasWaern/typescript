@@ -86,3 +86,20 @@ const rectangle: Rectangle = {
     height: 20,
     width: 30
 };
+
+
+function printStatusCode(code: string | number){
+    console.log(`My status code is ${code}.`)
+}
+
+printStatusCode(404);
+printStatusCode('404');
+
+
+function printHell(): void{
+    console.log('Hello');
+}
+
+function multiply(a: number, b: number){
+    return a * b
+}

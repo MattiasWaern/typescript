@@ -15,8 +15,8 @@ function ToDoList() {
         <div>
             <form id="toDoList" onSubmit={handleSubmit}>
 
-                {list.map((task) => (
-                    <li>{task}</li>
+                {list.map((task, index) => (
+                    <li key={index}>{task}</li>
                 ))}
 
                 <input

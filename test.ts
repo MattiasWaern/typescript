@@ -25,3 +25,14 @@ const obj = {
 };
 
 console.log(obj[uniqueKey]);
+
+
+const user = {
+    name: "Alice",
+    age: 30,
+    isAdmin: true
+};
+
+
+console.log(user.name);
+console.log(user.age);

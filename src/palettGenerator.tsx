@@ -1,6 +1,5 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './color.css';
-
 
 
 interface Color{
@@ -51,6 +50,16 @@ const ColorPicker = () => {
         setFavorites(favorites.filter(color => color.hex !== hex));
     };
 
+useEffect(() => {
+    const saved = localStorage.getItem('colorFavorites')
+    if(saved){
+        setFavorites(JSON.parse(saved));
+    }
+},[]);
+
+useEffect(() => {
+    localStorage.setItem('colorFavorites', JSON.stringify(favorites));
+},[favorites])
 
 
   return (

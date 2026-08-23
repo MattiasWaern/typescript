@@ -7,6 +7,7 @@ function ToDoList() {
 
     function handleSubmit(event: React.FormEvent) {
         event.preventDefault();
+        
 
         if (input.trim() === "") return;
 
@@ -14,8 +15,8 @@ function ToDoList() {
         setInput("");
     }
 
-    function deleteTask(index: number) {
-        setList(list.filter((_, i) => i !== index));
+    function deleteTask(id: number) {
+        setList(list.filter((_, i) => i !== id));
     }
 
     return (
@@ -38,13 +39,13 @@ function ToDoList() {
                 </div>
 
                 <ul>
-                    {list.map((task, index) => (
-                        <li key={index}>
+                    {list.map((task, id) => (
+                        <li key={id}>
                             <span>{task}</span>
 
                             <button
                                 type="button"
-                                onClick={() => deleteTask(index)}
+                                onClick={() => deleteTask(id)}
                             >
                                 Ta bort
                             </button>

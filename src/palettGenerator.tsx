@@ -97,8 +97,8 @@ useEffect(() => {
           {favorites.length === 0 ? (
             <p className="empty-message">Inga favoriter ännu. Spara några färger!</p>
           ) : (
-            favorites.map((color, index) => (
-              <div key={index} className="favorite-item">
+            favorites.map((color, id) => (
+              <div key={id} className="favorite-item">
                 <div 
                   className="favorite-color"
                   style={{ backgroundColor: color.hex }}

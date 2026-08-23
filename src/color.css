@@ -73,17 +73,17 @@
 
 .btn-generate {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white !important;
+  color: white;
 }
 
 .btn-copy {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white !important;
+  color: white;
 }
 
 .btn-save {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  color: white !important;
+  color: white;
 }
 
 /* Favoriter */

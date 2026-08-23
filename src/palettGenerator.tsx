@@ -55,7 +55,7 @@ const ColorPicker = () => {
 
   return (
     <div className="color-picker-container">
-      <h1>🎨 Färgväljare</h1>
+      <h1> Färgväljare</h1>
 
       {/* Visa nuvarande färg */}
       <div 
@@ -77,13 +77,13 @@ const ColorPicker = () => {
           📋 Kopiera HEX
         </button>
         <button onClick={saveToFavorites} className="btn-save">
-          ⭐ Spara favorit
+           Spara favorit
         </button>
       </div>
 
       {/* Favoriter */}
       <div className="favorites-section">
-        <h2>⭐ Mina favoriter ({favorites.length})</h2>
+        <h2> Mina favoriter ({favorites.length})</h2>
         <div className="favorites-grid">
           {favorites.length === 0 ? (
             <p className="empty-message">Inga favoriter ännu. Spara några färger!</p>

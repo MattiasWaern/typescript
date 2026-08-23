@@ -8,5 +8,8 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ColorPicker>
     </ColorPicker>
+    <ToDoList>
+      
+    </ToDoList>
   </StrictMode>,
 )

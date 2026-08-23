@@ -37,6 +37,18 @@ const ColorPicker = () = {
         navigator.clipboard.writeText(text);
         alert(`Kopierade: ${text}`);
     };
+
+    const saveToFavorites = () => {
+        if (!favorites.some(fav => fav.hex === currentColor.hex)){
+            setFavorites([...favorites, currentColor]);
+        } else {
+            alert('Denna färg finns redan i favoriter');
+        }
+    };
+
+    const removeFromFavorites = (hex: string) => {
+        setFavorites(favorites.filter(color => color.hex !== hex));
+    };
 }
 
 

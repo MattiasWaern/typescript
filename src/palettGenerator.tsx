@@ -71,10 +71,10 @@ const ColorPicker = () => {
       {/* Knappar */}
       <div className="button-group">
         <button onClick={generateRandomColor} className="btn-generate">
-          🎲 Slumpa färg
+           Slumpa färg
         </button>
         <button onClick={() => copyToClipboard(currentColor.hex)} className="btn-copy">
-          📋 Kopiera HEX
+           Kopiera HEX
         </button>
         <button onClick={saveToFavorites} className="btn-save">
            Spara favorit

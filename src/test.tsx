@@ -42,3 +42,20 @@ const [status, setStatus] = React.useState<'idle' | 'loading' | 'error'>('idle')
 
 type User = {id: string; name: string};
 const [user, setUser] = React.useState<User | null>(null);
+
+
+async function fetchJson<T>(url: string): Promise<T>{
+    const response = await fetch('url');
+
+    if(!response.ok){
+        throw new Error('Network error');
+    }
+
+    return response.json() as Promise<T>
+}
+
+async function loadPosts(){
+    type Post = {id: number; title: string};
+    const posts = await fetchJson<Post[]>("/api/posts");
+    console.log(posts);
+}

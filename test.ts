@@ -107,3 +107,8 @@ function multiply(a: number, b: number){
 function add(a: number, b: number, c?: number){
     return a + b + (c || 0);
 }
+
+const celsius = 25;
+const fahrenheit = celsius * 9/5 + 32
+
+console.log(`${celsius} Celsius = ${fahrenheit} Fahrenheit`)

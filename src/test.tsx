@@ -12,3 +12,21 @@ export function Greeting({name, age}: GreetingProps){
         </div>
     )
 }
+
+
+
+
+function nameInput(){
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>){
+        console.log(e.target.value);
+    }
+    return <input onChange={handleChange}/>
+}
+
+
+function saveButton(){
+    function handleClick(e: React.MouseEvent<HTMLButtonElement>){
+        e.preventDefault();
+    }
+    return <button onClick={handleClick}>Save</button>;
+}

@@ -59,3 +59,13 @@ async function loadPosts(){
     const posts = await fetchJson<Post[]>("/api/posts");
     console.log(posts);
 }
+
+
+type Theme = 'light' | 'dark';
+const themeContext = React.createContext<{theme: Theme; toggle(): void} | null>(null);
+
+function ThemeProvider({children} : {children: React.ReactNode}){
+    const [theme, setTheme] = React.useState<Theme>('light');
+    const value = {theme, toggle: () => setTheme(t => (t === 'light' ? 'dark' : 'light'))};
+    return <themeContext.Provider value={value}> {children} </themeContext.Provider>;
+}

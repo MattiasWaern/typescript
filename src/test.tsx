@@ -1,3 +1,7 @@
+import { useState } from "react";
+import React from "react";
+
+
 type GreetingProps = {
     name: string;
     age?: number;
@@ -30,3 +34,11 @@ function saveButton(){
     }
     return <button onClick={handleClick}>Save</button>;
 }
+
+
+
+const [count, setCount] = React.useState<number>(0);
+const [status, setStatus] = React.useState<'idle' | 'loading' | 'error'>('idle');
+
+type User = {id: string; name: string};
+const [user, setUser] = React.useState<User | null>(null);

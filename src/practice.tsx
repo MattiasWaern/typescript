@@ -26,4 +26,4 @@ function greet(name: string, age: number){
     return(`Hejsan ${name}, är du ${age} år gammal?`)
 }
 
-console.log(greet('bob', 20))
+console.log(greet('bob', 20)) 

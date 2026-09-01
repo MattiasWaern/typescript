@@ -23,6 +23,7 @@ console.log(bookings);
 
 
 function greet(name: string, age: number){
+    name = "Mattias";
     return(`Hejsan ${name}, är du ${age} år gammal?`)
 }
 
